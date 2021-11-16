@@ -1,0 +1,59 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar class="new-background-color">
+      <ion-title>Iniciar Sesión</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content class="ion-padding">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col>
+          <div>
+            <img src="assets\img\duocvina.jpg"/>  
+            <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+              <ion-item lines="full">         
+                <ion-label position="floating">Usuario</ion-label> <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->         
+                <ion-input formControlName="name" type="text" [(ngModel)]="user.usuario" required></ion-input>
+                <span style="color:red; font-size: small" class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+                  El Nombre es requerido.
+                </span>
+                <span style="color:red; font-size: small;" class="error ion-padding" color="danger" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+                  El nombre debe tener mínimo 2 caracteres.
+                </span>      
+              </ion-item>       
+              <ion-item lines="full">         <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->         
+                <ion-label position="floating">Password</ion-label>         
+                <ion-input formControlName="password" type="password" [(ngModel)]="user.password" required></ion-input>
+                <span style="color:red; font-size: small" class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+                  La contraseña es requerida.
+                </span>
+                <span style="color:red; font-size: small" class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.minlength">
+                  La contraseña debe tener mínimo 2 caracteres.
+                </span>
+                <span style="color:red; font-size: small" class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.maxlength">
+                  La contraseña debe tener máximo 8 caracteres.
+                </span>         
+              </ion-item>       
+              <ion-row>         
+                <ion-col>           <!-- Indicamos mediante el (click) la funcion a quien referenciara-->           
+                  <ion-button type="submit" expand="full" >Ingresar</ion-button>
+                  <a [routerLink]="['/forgot-password']" class="small-text" style="color:red; font-size:small">Olvidó la contraseña?</a>         
+                </ion-col>    
+              </ion-row>
+            </form>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar>
+      <div class="image-container"><img src="assets\img\logo.png"/></div>
+    </ion-toolbar>
+  </ion-footer>
+  
+</ion-app>
+

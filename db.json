@@ -1,0 +1,83 @@
+{
+  "alumnos": [
+    {
+      "id": 1,      
+      "usuario": "ri.arayah",
+      "nombre": "Ricardo Araya",
+      "email": "ri.arayah@duocuc.cl",
+      "telefono": "912345678",
+      "carrera": "Analista Programador",      
+      "jornada": "vespertino"      
+    }
+  ],
+  "asignaturas": [
+    {
+      "alumnoId": 1,
+      "id": 1,
+      "nombreAsignatura": "Programacion Web",
+      "horarios": {
+        "h1": {
+          "dia":"Lunes",
+          "inicio": "19:15",
+          "termino": "21:30"
+          },
+        "h2": {
+          "dia":"Martes",
+          "inicio": "21:31",
+          "termino": "23:00"
+          }        
+      }      
+    },
+    {
+      "alumnoId": 1,
+      "id": 2,
+      "nombreAsignatura": "Consulta de Base Datos",
+      "horarios": {
+        "h1": {
+          "dia":"Lunes",
+          "inicio": "22:16",
+          "termino": "23:45"
+          },
+        "h2": {
+          "dia":"Viernes",
+          "inicio": "19:15",
+          "termino": "21:30"
+          }        
+      }      
+    },
+    {
+      "alumnoId": 1,
+      "id": 3,
+      "nombreAsignatura": "Asignatura Test",
+      "horarios": {
+        "h1": {
+          "dia":"Lunes",
+          "inicio": "00:00",
+          "termino": "23:59"         
+        },
+        "h2": {
+          "dia":"Martes",
+          "inicio": "00:00",
+          "termino": "23:59"
+          }        
+      }      
+    },
+    {
+      "alumnoId": 1,
+      "id": 4,
+      "nombreAsignatura": "Arquitectura",
+      "horarios": {
+        "h1": {
+          "dia":"Martes",
+          "inicio": "19:16",
+          "termino": "21:30"
+          },
+        "h2": {
+          "dia":"Miercoles",
+          "inicio": "22:16",
+          "termino": "23:45"
+          }        
+      }      
+    } 
+  ]
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "skeletonApp2",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button [routerLink]="['']" slot="start" (click)="cerrarSesion()">
+      <ion-icon name="exit"></ion-icon>      
+    </ion-button>    
+    <ion-title class="text-container"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="text-container">
+  <div><br><br><br>
+    <ion-label style="text-align: center; font-size: xx-large;">{{ dateTime | async | date:'shortTime' }}</ion-label>   
+  </div>
+  <div>
+    <ion-label style="text-align: center; font-size: large;">{{ dateTime | async | date }}</ion-label>
+  </div>
+</ion-content>
